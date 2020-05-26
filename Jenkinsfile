@@ -8,6 +8,10 @@ pipeline {
         }
 
       }
+      environment {
+        registry = 'apunreddy/test:1'
+        registryCredential = 'dockerhub'
+      }
       steps {
         sh '''./gradlew clean build jib
 '''
