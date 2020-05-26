@@ -1,16 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'apunreddy/gradle:latest'
-      args '-p 3000:3000'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
+      agent {
+        docker {
+          image 'apunreddy/gradle:latest'
+        }
+
+      }
       steps {
-        sh '''chmod +x gradlew
-./gradlew clean build jib
+        sh '''./gradlew clean build jib
 '''
       }
     }
