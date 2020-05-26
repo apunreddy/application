@@ -10,8 +10,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''chmod +x gradlew
-mkdir /.docker
-docker login -u apunreddy -p A@sand0421 docker.io
+sudo mkdir /.docker
+sudo docker login -u apunreddy -p A@sand0421 docker.io
 ./gradlew clean build jib
 '''
       }
