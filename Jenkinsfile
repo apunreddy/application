@@ -5,7 +5,7 @@ pipeline {
       agent {
         docker {
           image 'apunreddy/agent:latest'
-          args '--env DOCKER_HOST=tcp://docker:2376'
+          args '--env DOCKER_OPTS="-H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock"'
         }
 
       }
