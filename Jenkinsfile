@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent {
         docker {
-          image 'apunreddy/gradle:latest'
+          image 'jenkins/agent:latest'
         }
 
       }
