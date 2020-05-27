@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent {
         docker {
-          image 'jenkins/agent:latest'
+          image 'jenkins/jnlp-slave:alpine'
         }
 
       }
