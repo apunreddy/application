@@ -13,7 +13,7 @@ pipeline {
         registryCredential = 'dockerhub'
       }
       steps {
-        sh '''./gradlew clean build
+        sh '''./gradlew clean build jib
 '''
       }
     }
