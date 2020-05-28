@@ -48,7 +48,6 @@ jib {
 	to.image = "apunreddy/test1:latest"
         to.auth.username="apunreddy"
         to.auth.password="A@sand0421"
-
 //	container.environment = mapOf("SPRING_PROFILES_ACTIVE" to "testing", "JDBC_URL" to "postgres:5432/flyway")
 }
 
