@@ -9,7 +9,8 @@ pipeline {
 
       }
       steps {
-        sh './gradlew build jib'
+        sh '''./gradlew build jib
+kubectl get pods --all-namespaces'''
       }
     }
 
